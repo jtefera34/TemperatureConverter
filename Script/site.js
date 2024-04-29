@@ -6,7 +6,7 @@ const resetBtn = document.getElementById("resetBtn");
 
 
 //input
-const cels = document.getElementById("number1Field");
+const fahr = document.getElementById("number1Field");
 
 
 //output
@@ -23,7 +23,7 @@ resetBtn.onclick = resetBtnclick;
 };
 
 function convertBtnclick(){
-var inputValue = cels.value; 
+var inputValue = fahr.value; 
 if (isNaN(inputValue)){
     error.innerHTML="please input only a number";
   answer.value = "";
@@ -31,12 +31,11 @@ if (isNaN(inputValue)){
 };
 
 
-var result = (inputValue * 1.8)+32;
+var result = (inputValue - 32)/1.8
 answer.value = result;
 
 }
 function resetBtnclick(){
   answer.value = "";
-  cels.value="";
+  fahr.value="";
 }
-
